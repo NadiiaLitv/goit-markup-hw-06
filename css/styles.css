@@ -598,9 +598,14 @@ body {
   pointer-events: none;
 }
 .modal {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 50%;
   left: 50%;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 72px;
   transform: translate(-50%, -50%);
   width: 408px;
   min-height: 576px;
@@ -637,4 +642,42 @@ body {
 .modal-close-btn:hover .modal-close-icon,
 .modal-close-btn:focus .modal-close-icon {
   fill: var(--color-white);
+}
+/* Modal Form */
+.modal-text {
+  margin-bottom: 16px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--color-navy-blue-modal);
+}
+.modal-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 38px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+}
+/* .modal-input:hover, 
+.modal-input:focus {
+  border-color: var(--color-iris);
+}*/
+
+.modal-label-span {
+  display: block;
+  margin-bottom: 4px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: var(--color-light-slate);
+}
+.modal-label {
+  margin-bottom: 8px;
 }
