@@ -56,6 +56,17 @@ body {
   --color-dairy: #fcfcfc;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
 /*  */
 /* HEADER */
 /*  */
@@ -678,6 +689,17 @@ body {
   padding-right: 16px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.modal-form-textarea::placeholder {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+}
+
 .modal-form-textarea:focus {
   border-color: var(--color-iris);
 }
@@ -686,6 +708,23 @@ body {
   outline: none;
   border-color: var(--color-iris);
 }
+.modal-label-policy::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+.modal-input-policy:checked + .modal-label-policy::before {
+  background-color: var(--color-ocean);
+  background-image: url(../images/vector-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .modal-label-span,
 .modal-label-policy {
   display: block;
@@ -697,6 +736,11 @@ body {
   line-height: 1.16;
   letter-spacing: 0.04em;
   color: var(--color-light-slate);
+}
+.modal-label-policy {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
 }
 .modal-label {
   margin-bottom: 8px;
@@ -715,4 +759,35 @@ body {
 }
 .modal-input:focus + .modal-form-input-icon {
   fill: var(--color-iris);
+}
+.privacy-policy-link {
+  color: var(--color-iris);
+}
+
+.modal-form-submit {
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  border-radius: 4px;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  align-items: center;
+  letter-spacing: 0.04em;
+  color: var(--color-white);
+  background: var(--color-iris);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-submit:hover,
+.modal-form-submit:focus {
+  background-color: var(--color-ocean);
 }
